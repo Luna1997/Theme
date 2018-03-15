@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+THEME MADE BY ALTOGETHER-CUTE. FEEL FREE TO USE IT WITH OR WITHOUT CREDIT
+https://pastebin.com/qsbVdUj6
+-->
+
+<title>{Title}</title>
+
+<meta name="color:BackgroundBox" content=""/>
+<meta name="color:Backposts" content=""/>
+<meta name="color:Background" content=""/>
+
+<meta name="color:Links" content=""/>
+<meta name="color:LinksHover" content=""/>
+<meta name="color:BoxHover" content=""/>
+<meta name="color:BoxLinks" content=""/>
+<meta name="color:JumppageBG" content=""/>
+<meta name="color:Chat" content=""/>
+
+<meta name="color:Divide" content=""/>
+<meta name="color:Blockquot" content=""/>
+
+<meta name="color:BodyText" content "" />
+
+<meta name="image:profilepic" content=""/>
+
+
+<style>
+    .notes {
+        background-color:{color:Backposts};
+        color:{color:BodyText};
+        font-size:9px;
+        margin: 0px auto 0px auto;
+	    padding: 0px 0px 0px 0px;
+	    width: 520px;
+    }
+
+    .chat {
+        margin: 0  0 0 -40px;
+    }
+
+    .chat li:nth-of-type(odd){
+        background-color: {color:Chat}; 
+        text-decoration:none;
+        list-style-type: none;
+    } 
+
+    .chat li:nth-of-type(even){
+        background-color: #ffffff;
+        text-decoration:none;
+        list-style-type: none;
+    }
+
+    ol.notes li.note {
+        border-top: solid 1px #ccc;
+        padding: 5px 15px 5px 0px;
+        margin:0  0 0 0px;
+    }
+    
+    ol.notes {
+        padding-left:0px;
+        list-style-type: none;
+    }
+
+    ol.notes li.note img.avatar {
+        vertical-align: -4px;
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+        padding-left:10px;
+    }
+
+    ol.notes li.note span.action {
+        font-weight: bold;
+    }
+
+    ol.notes li.note .answer_content {
+        font-weight: normal;
+    }
+
+    ol.notes li.note blockquote {
+        border-color: #eee;
+        padding: 4px 10px;
+        margin: 10px 0px 0px 25px;
+    }
+
+    ol.notes li.note blockquote a {
+        text-decoration: none;
+    }
+
+    .jump_page {
+        padding: 3px 5px;
+        margin:0 1.2px 0 1.2px;
+        border: 1.5px solid {color:Backposts};
+        background-color:{color:Backposts};
+        color:black;
+        font-family:sans-serif;
+        font-size:8px;
+        text-decoration:none;
+    }
+
+    .current_page, .jump_page:hover {
+        padding: 3px 5px;
+        margin:0 1.2px 0 1.2px;
+        border: 1.5px solid {color:JumppageBG};
+        background-color: {color:JumppageBG};
+        color: black;
+        font-family:sans-serif;
+        font-size:8px;
+        text-decoration:none;
+    }
+
+    .ullinks {
+        text-decoration:none;
+        list-style-type: none;
+        font-size:13px;
+    }
+
+	body {
+		background:  {color:Background};
+		font-family: sans-serif;
+	}
+	.post {
+		background: {color:Backposts};
+		color:{color:BodyText};
+		left:10%;
+		margin: 15px auto;
+		padding: 10px 10px 10px 10px;
+		width: 500px;
+	}
+	
+    .pic img, blockquote img {
+        width: 100%;
+    }
+
+    .post blockquote {
+        border-left: solid 3px {color:Blockquot};
+        margin: 0 0 0 0;
+        padding-left: 10px;
+    }
+
+	.like-reblog {
+	    list-style: none;
+		border: 1px solid {color:Backposts};
+	}
+	.like-reblog li {
+		float: right;
+		padding: 6px;
+		height: 20px;
+	}
+	
+	.divider {
+		top:20px;
+		margin:30px 0 0 0;
+		list-style: none;
+		border: 2px solid {color:Divide};
+	}
+	
+	.divider li {
+		float: right;
+		padding: 60px;
+		height: 40px;
+	}
+	
+	a {
+	    text-decoration:none;
+	    color:{color:Links};
+	}
+	
+	a:hover {
+	    text-decoration:none;
+	    color:{color:LinksHover};
+	}
+	
+	.box {
+	    height:120px;
+	    width:150px;
+	    background-color:{color:BackgroundBox}; 
+	    color:#000;
+	     
+	}
+	
+	.box a{
+	    color:{color:BoxLinks};
+	}
+	
+	.box a:hover {
+	    color:{color:BoxHover};
+	}
+	
+	.outerbox {
+	    position:fixed;
+	    top:170px;
+	    left:10%;
+	}
+	
+	.pagin {
+	    
+        position:fixed;
+        left:10%;
+        top:290px;
+        width:150px;
+	}
+	
+	.links {
+	    margin:0px;
+	    left:-30px;
+	    position:absolute;
+	    text-decoration:none;
+	    color:#000;
+	    bottom:-10px;
+	}
+	
+	.links a {
+	    color:{color:BoxLinks};
+	}
+	
+	.links a:hover {
+	    color:{color:BoxHover};
+	}
+	
+    .desc {
+        font-size:9px;
+        padding:10px;
+    }
+    
+    /*
+ _     _ _             
+| |   (_) |            
+| |    _| | _____  ___ 
+| |   | | |/ / _ \/ __|
+| |___| |   <  __/\__ \
+\_____/_|_|\_\___||___/
+    */
+    
+    .dividelikes li {
+		float: right;
+		padding: 60px;
+		height: 40px;
+	}
+    
+    .dividelikes {
+		top:20px;
+		margin:30px 0 0 0;
+		list-style: none;
+		border: 2px solid {color:Divide};
+    }
+    
+    ul#likes {
+        list-style-type: none;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+
+    li.like_post {
+        /* Should match the width specified in the Likes tag */
+        width: 180px;
+        padding: 0 0px 0 0;
+        float: left;
+    }
+
+    li.like_post img {
+        max-width: 100%;
+    }
+
+    li.like_post blockquote {
+        margin: 0;
+        border-left: solid 3px {color:Blockquot};
+        padding-left: 10px;
+    }
+
+    li.like_post ol, li.like_post ul {
+        margin: 0 0 0 15px;
+        padding: 0;
+    }
+
+    li.like_post .like_link a {
+        font-weight: bold;
+    }
+
+    li.like_post .like_title {
+        font-weight: bold;
+    }
+
+    li.like_post .post_info_bottom {
+        margin: 10px 0 0 0;
+        display: block !important;
+    }
+    
+    #likes_container {
+        position:absolute;
+        background-color:white;
+        width:220px;
+        right:100px;
+        margin: 0 auto;
+        padding:0 0 10px 20px;
+    }
+    
+    
+</style>
+</head>
+<body>
+<!-- leave until it can be made prettier
+    {block:Likes}
+            <div id="likes_container">
+                <h2>Stuff I like</h2>
+               {Likes limit="5" summarize="100" width="180px"}
+            </div>
+    {/block:Likes}
+-->
+	<div class="outerbox">
+	    <div class="box">
+	        <div class="desc">
+	            <b>{Title}</b>
+	            <br>
+	            {Description}
+	        </div>
+
+            {block:HasPages}
+                <div class="links">
+                    <ul class="ullinks">
+                        <li><a href="/">Home</a></li>
+                        {block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+                    </ul>
+                </div>
+            {/block:HasPages} 
+	    </div>
+	</div>
+	
+	
+	<div class="pagin">	
+	    <center>
+	        {block:Pagination}
+	            <div class="pagenav">
+	                {block:Pagination}{block:PreviousPage}<a href="{PreviousPage}" class="jump_page"><</a>{/block:PreviousPage}
+                    {block:JumpPagination length="5"}
+                    {block:CurrentPage}<span class="current_page">{PageNumber}</span>{/block:CurrentPage}
+                    {block:JumpPage}<a class="jump_page" href="{URL}">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}
+                    {block:NextPage}<a href="{NextPage}" class="jump_page">></a>{/block:NextPage}
+                </div>
+            {/block:Pagination}
+	    </center>
+	</div>
+	
+	
+{block:Posts}
+	<!-- {SourceURL}{block:SourceLogo}<img src=“{BlackLogoURL}”
+width=“{LogoWidth}” height=“{LogoHeight}” alt=“{SourceTitle}” />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+
+{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+
+{block:Text}
+
+    <div class="post">
+	    {block:Title}
+		    <h3>
+			    <a href="{Permalink}">{Title}</a>
+		    </h3>
+	    {/block:Title}
+	        {Body}
+	        
+	    <ul class="like-reblog">
+		    <li>{LikeButton}</li>
+		    <li>{ReblogButton}</li>
+		    <li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+			<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+		</ul>
+		
+		<ul class="divider">
+		</ul>
+	</div>
+
+{/block:Text}
+
+
+
+{block:Link}
+
+	<div class="post">
+		<img src="{Thumbnail}"></img>
+			<h2> <a href="{URL}" class="link" {Target}>{Name}</a></h2><br>
+                {block:Excerpt} {Excerpt}{/block:Excerpt}
+                {block:Description}{Description}{/block:Description} 
+                
+            <ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+			    <li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+			    <li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+			</ul>
+			
+		<ul class="divider">
+		</ul>
+    </div>
+
+{/block:Link}
+			
+
+				
+{block:Photo} 
+
+		<div class="post">	
+			<img src="{PhotoURL-500}">
+			{block:Caption}{Caption}{/block:Caption}
+			
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+				<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+			</ul>
+				
+        <ul class="divider">
+		</ul>
+	</div>
+
+{/block:Photo}
+
+
+
+{block:Quote}
+
+		<div class="post">
+            {Quote}<br>
+            {block:Source}-<b>{Source}</b>{/block:Source}     
+
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+				<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+			</ul>
+			
+		<ul class="divider">
+		</ul>
+	</div>
+
+{/block:Quote}
+
+
+
+{block:Chat}
+
+	<div class="post">
+		<ul class="chat">
+            {block:Lines}
+            <li>
+            {block:Label}
+            <b>{Label}</b>
+            {/block:Label}
+            {Line}
+            </li>
+            {/block:Lines}
+        </ul>
+        
+		<ul class="like-reblog">
+			<li>{LikeButton}</li>
+			<li>{ReblogButton}</li>
+				<li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+				<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+		</ul>
+		
+		<ul class="divider">
+		</ul>
+	</div>
+
+{/block:Chat}
+
+
+
+{block:Audio}
+
+	<div class="post">
+		{AudioPlayer}
+      	{block:Caption}{Caption}{/block:Caption}
+			
+		<ul class="like-reblog">
+			<li>{LikeButton}</li>
+		    <li>{ReblogButton}</li>
+		    <li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+			<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+		</ul>
+		
+		<ul class="divider">
+		</ul>
+	</div>
+
+{/block:Audio}
+
+
+
+{block:Video}
+
+	<div class="post">
+		{Video-500}
+		{block:Caption}{Caption}{/block:Caption}
+			
+		<ul class="like-reblog">
+			<li>{LikeButton}</li>
+			<li>{ReblogButton}</li>
+			<li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+		    <li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+		</ul>
+		
+		<ul class="divider">
+		</ul>
+	</div>
+
+{/block:Video}
+
+
+
+{block:Answer}
+   
+    <div class="post">
+        <table style="border-bottom:1px solid #a0a0a0;padding-bottom:5px;margin-bottom:5px;">
+            <tr>
+                <td style="vertical-align:top;padding-right:10px;"><img src="{AskerPortraitURL-64}"></td>
+                <td style="vertical-align:top;"><strong>{Asker} asked:</strong> {Question}</td>
+            </tr>
+        </table>
+        {Answer}
+
+        <ul class="like-reblog">
+			<li>{LikeButton}</li>
+			<li>{ReblogButton}</li>
+			<li><a href="{PermaLink}"><img src="https://i.imgur.com/O2XI5pf.png" style="height:20px;width:20px;"></a></li>
+			<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:11px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+		</ul>
+			
+        <ul class="divider">
+	    </ul>
+	</div>
+
+{/block:Answer}
+
+{/block:Posts}
+
+{block:PostNotes}
+	<div class="notes">
+	    <a name=“notes”>{PostNotes}</a>
+	</div>
+{/block:PostNotes}
+</body>
+</html>
