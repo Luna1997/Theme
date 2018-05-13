@@ -4,7 +4,7 @@
 <!--
 THEME MADE BY Lesbian-Beauvoir. FEEL FREE TO USE IT
 https://pastebin.com/qsbVdUj6
-https://github.com/Luna1997/Theme
+ 
 If you re-use this theme you might want to change certain things like the title
 -->
  
@@ -112,8 +112,9 @@ If you re-use this theme you might want to change certain things like the title
         width: 500px;
     }
    
-    .pic img, blockquote img {
-        /*width: 100%;*/
+  .pic img, blockquote img {
+        height:100%;
+        width: 100%;
     }
  
     .post blockquote {
@@ -344,11 +345,6 @@ Credit to http://alphathemes.tumblr.com
                overflow: hidden;
            }
          
-        /*   .playerbuttonhug {
-               position: absolute;
-               top: -18px;
-               left: -7px;
-           }*/
      
            .tumblr_audio_player {
                height: 90px;
@@ -422,17 +418,24 @@ Credit to http://alphathemes.tumblr.com
         border-bottom:1px solid #a0a0a0
             
         }
+        
+        .video {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden; 
+  }
+
+.video iframe, .media object, .media embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
 </style>
 </head>
 <body>
-<!-- leave until it can be made prettier
-   {block:Likes}
-           <div id="likes_container">
-               <h2>Stuff I like</h2>
-              {Likes limit="2" summarize="100" width="180px"}
-        </ul>
-           </div>
-   {/block:Likes}-->
 
     <div class="outerbox">
         <div class="profilepic"> 
@@ -535,12 +538,52 @@ Credit to http://alphathemes.tumblr.com
  
 {/block:Link}
            
+{block:Panorama}
+<div class="post">
+{LinkOpenTag}<center><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" /></center>{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}
+  <ul class="like-reblog" style="left:-50px">
  
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+                            <li>
+{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+           
+             
+        </ul>
+       
+        <ul class="divider">
+   
+        </ul>
+</div>
+{/block:Panorama}
+           
+ {block:Photoset}
+ <div class="post">
+ {block:Photos}
+        <center><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" /></center>
+                {block:Caption}{Caption}{/block:Caption}
+            {/block:Photos}
+            {block:Caption}{Caption}{/block:Caption}
+                     <ul class="like-reblog" style="left:-50px">
+ 
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+                            <li>
+{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
+           
+             
+        </ul>
+        <ul class="divider">
+        </ul>
+            
+            </div>
+        {/block:Photoset}
                
 {block:Photo}
  
         <div class="post"> 
-           <center> <img src="{PhotoURL-500}"></center>
+           <center>
+{LinkOpenTag}<img src="{PhotoURL-500}" />{LinkCloseTag}</center>
             {block:Caption}{Caption}{/block:Caption}
          <ul class="like-reblog" style="left:-50px">
  
@@ -671,7 +714,7 @@ Credit to http://alphathemes.tumblr.com
 {block:Video}
  
     <div class="post">
-        {Video-500}
+        <div class="video">{Video-500}</div>
         {block:Caption}{Caption}{/block:Caption}
            
      <ul class="like-reblog" style="left:-50px">
