@@ -29,6 +29,7 @@ If you re-use this theme you might want to change certain things like the title
 <meta name="image:profilepic" content=""/>
  
 <link rel="shortcut icon" href="{FavIcon}" />
+
 <style>
     .notes {
         background-color:{color:Backposts};
@@ -106,15 +107,16 @@ If you re-use this theme you might want to change certain things like the title
     .post {
         background: {color:Backposts};
         color:{color:BodyText};
-        left:10%;
         margin: 15px auto;
         padding: 10px 10px 10px 10px;
         width: 500px;
+        left:10%;
     }
    
   .pic img, blockquote img {
         height:100%;
         width: 100%;
+        max-width:500px;
     }
  
     .post blockquote {
@@ -137,11 +139,12 @@ If you re-use this theme you might want to change certain things like the title
     ul.like-reblog {
         padding-left:0px;
         padding:0 0;
+        margin-top:0px;
     }
    
     .divider {
         top:20px;
-        margin:19px 0 0 0;
+        margin:5px 0 0 0;
         list-style: none;
         border: 2px solid {color:Divide};
     }
@@ -493,20 +496,17 @@ Credit to http://alphathemes.tumblr.com
         {/block:Title}
             {Body}
            
-        <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-       
+
+       <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
    
         </ul>
- 
+    <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>
     </div>
  
 {/block:Text}
@@ -521,63 +521,40 @@ Credit to http://alphathemes.tumblr.com
                 <div class="description"> {block:Excerpt} {Excerpt}<br>{/block:Excerpt}<br></div>
                 {block:Description}{Description}{/block:Description}
                
-            <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-           
+         
+<div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>            
         <ul class="divider">
         </ul>
-               
+              <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>     
     </div>
  
 {/block:Link}
            
-{block:Panorama}
-<div class="post">
-{LinkOpenTag}<center><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" /></center>{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}
-  <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-       
-        <ul class="divider">
-   
-        </ul>
-</div>
-{/block:Panorama}
+
            
  {block:Photoset}
  <div class="post">
- {block:Photos}
-        <center><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" /></center>
-                {block:Caption}{Caption}{/block:Caption}
-            {/block:Photos}
+ {Photoset-500}
             {block:Caption}{Caption}{/block:Caption}
-                     <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
+
+        <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-            
+                <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>
             </div>
-        {/block:Photoset}
+{/block:Photoset}
+
+
                
 {block:Photo}
  
@@ -585,18 +562,16 @@ Credit to http://alphathemes.tumblr.com
            <center>
 {LinkOpenTag}<img src="{PhotoURL-500}" />{LinkCloseTag}</center>
             {block:Caption}{Caption}{/block:Caption}
-         <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
+
+        <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+               <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>    
     </div>
  
 {/block:Photo}
@@ -609,19 +584,15 @@ Credit to http://alphathemes.tumblr.com
             {Quote}<br>
             {block:Source}-<b>{Source}</b>{/block:Source}    
  
-             <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-           
+           <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+                <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>   
     </div>
  
 {/block:Quote}
@@ -642,19 +613,15 @@ Credit to http://alphathemes.tumblr.com
             {/block:Lines}
         </ul>
        
-     <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-       
+       <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+              <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>     
     </div>
  
 {/block:Chat}
@@ -692,19 +659,16 @@ Credit to http://alphathemes.tumblr.com
    
         {block:Caption}{Caption}{/block:Caption}
            
-     <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-       
+
+       <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+           <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>        
     </div>
  
 {/block:Audio}
@@ -717,19 +681,16 @@ Credit to http://alphathemes.tumblr.com
         <div class="video">{Video-500}</div>
         {block:Caption}{Caption}{/block:Caption}
            
-     <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-       
+    
+       <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+              <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>     
     </div>
  
 {/block:Video}
@@ -747,19 +708,15 @@ Credit to http://alphathemes.tumblr.com
         </table>
         {Answer}
  
-        <ul class="like-reblog" style="left:-50px">
- 
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-                            <li>
-{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
-<li>{block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:12px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a></li>
-           
-             
-        </ul>
-           
+           <div class="tags" style="font-size:8px;padding-top:10px;">
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+</div>  
         <ul class="divider">
         </ul>
-               
+           <ul class="like-reblog" style="left:-50px">
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+        </ul>        
     </div>
  
 {/block:Answer}
