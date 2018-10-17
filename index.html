@@ -10,9 +10,9 @@ If you re-use this theme you might want to change certain things like the title
  
 <title>Lesbian-Beauvoir - {Title}</title>
 
-<meta name="color:BackgroundBox" content=""/>
-<meta name="color:Backposts" content=""/>
-<meta name="color:Background" content=""/>
+<meta name="color:BackgroundBox" content="white"/>
+<meta name="color:Backposts" content="white"/>
+<meta name="color:Background" content="white"/>
  
 <meta name="color:Links" content=""/>
 <meta name="color:LinksHover" content=""/>
@@ -294,20 +294,20 @@ If you re-use this theme you might want to change certain things like the title
 The little symbol indicating that I (lesbian-beauvoir) made the theme
 */  
    .copyright {
-       top:0px;
-       left:-215px;
+       bottom:-5px;
+       left:-5px;
        position:fixed;
        background-color:{color:BackgroundBox};
        padding:5px 10px;
        margin:0 0;
        height:14px;
        font-size:11px;
-       -webkit-transition:left 2s; /* Safari */
-       transition:left 2s;
+       -webkit-transition:bottom 1s; /* Safari */
+       transition:bottom 1s;
    }
    
    .copyright:hover {
-       left:0px;
+       bottom:8px;
    }
    
 /*
@@ -465,8 +465,8 @@ Credit to http://alphathemes.tumblr.com
    
     <div class="pagin">
                 <div class="pagenav">{block:Pagination}
-                  {block:PreviousPage} <a href="{PreviousPage}"><div class="prev"><center>&lt;</center></div></a>{/block:PreviousPage}
-                 {block:NextPage} <a href="{NextPage}">  <div class="next"><center>&gt;</center></div></a>{/block:NextPage}
+                  {block:PreviousPage} <a href="{PreviousPage}"><div class="prev"><center>&#9668;</center></div></a>{/block:PreviousPage}
+                 {block:NextPage} <a href="{NextPage}">  <div class="next"><center> 	&#9658;</center></div></a>{/block:NextPage}
                   {/block:Pagination}
                   
                   
@@ -498,7 +498,7 @@ Credit to http://alphathemes.tumblr.com
            
 
        <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
    
@@ -523,7 +523,7 @@ Credit to http://alphathemes.tumblr.com
                
          
 <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>            
         <ul class="divider">
         </ul>
@@ -543,7 +543,7 @@ Credit to http://alphathemes.tumblr.com
             {block:Caption}{Caption}{/block:Caption}
 
         <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -564,7 +564,7 @@ Credit to http://alphathemes.tumblr.com
             {block:Caption}{Caption}{/block:Caption}
 
         <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -585,7 +585,7 @@ Credit to http://alphathemes.tumblr.com
             {block:Source}-<b>{Source}</b>{/block:Source}    
  
            <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -614,7 +614,7 @@ Credit to http://alphathemes.tumblr.com
         </ul>
        
        <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -661,7 +661,7 @@ Credit to http://alphathemes.tumblr.com
            
 
        <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -683,7 +683,7 @@ Credit to http://alphathemes.tumblr.com
            
     
        <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -709,7 +709,7 @@ Credit to http://alphathemes.tumblr.com
         {Answer}
  
            <div class="tags" style="font-size:8px;padding-top:10px;">
-    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:8px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
+    {block:HasTags}{block:Tags}<b><a href="{TagURL}" style="font-size:10px;"> #{Tag}</a></b>{/block:Tags}{/block:HasTags}</a>
 </div>  
         <ul class="divider">
         </ul>
@@ -729,6 +729,6 @@ Credit to http://alphathemes.tumblr.com
     </div>
 {/block:PostNotes}
  
-<div class="copyright">Theme made by: Lesbian-Beauvoir &nbsp;&nbsp;&nbsp;&copy;</div>
+<div class="copyright">&copy;</br>Theme made by: Lesbian-Beauvoir</div>
 </body>
 </html>
