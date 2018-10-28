@@ -30,6 +30,20 @@ If you re-use this theme you might want to change certain things like the title
 <link rel="shortcut icon" href="{FavIcon}" />
 
 <style>
+
+.made-by {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    background-color:white;
+    width:500px;
+    padding:5px 10px 2px 10px;
+    font-size:12px;
+    {block:PermalinkPagination}
+        margin-bottom:15px;
+        border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    {/block:PermalinkPagination}
+}
 .post-content div.npf_row, .post div.npf_row {
     width: 475px;
     margin-left:0px;
@@ -318,7 +332,7 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
        bottom:-5px;
        left:-5px;
        position:fixed;
-       background-color:{color:BackgroundBox};
+       background-color:{color:Background};
        padding:5px 10px;
        margin:0 0;
        height:14px;
@@ -786,13 +800,13 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
 {/block:Answer}
 
 {/block:Posts}
-
+<center><div class="made-by">Theme by: Lesbian-Beauvoir</div></center>
 {block:PostNotes}
     <div class="notes">
         <a name=“notes”>{PostNotes}</a>
     </div>
 {/block:PostNotes}
  
-<div class="copyright">&copy;</br>Theme made by: Lesbian-Beauvoir</div>
+<div class="copyright">&copy;</br>Lesbian-Beauvoir</div>
 </body>
 </html>
