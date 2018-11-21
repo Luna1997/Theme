@@ -14,6 +14,7 @@ If you re-use this theme you might want to change certain things like the title
 <meta name="color:Background" content="white"/>
  
 <meta name="color:Links" content=""/>
+<meta name="color:Sidebar" content=""/>
 <meta name="color:LinksHover" content=""/>
 <meta name="color:BoxHover" content=""/>
 <meta name="color:BoxLinks" content=""/>
@@ -134,14 +135,14 @@ If you re-use this theme you might want to change certain things like the title
     }
    
   .pic img, blockquote img {
-        height:100%;
-        width: 100%;
-        max-width:500px;
+         max-width: 100%;
+        max-height: auto;
+    
     }
  
     .post blockquote {
         border-left: solid 2px {color:Blockquot};
-        margin: 0px 10px 10px 15px;
+        margin: 0px 5px 10px 5px;
         padding-left: 8px;
     }
  
@@ -213,8 +214,8 @@ If you re-use this theme you might want to change certain things like the title
    
     .outerbox {
         position:fixed;
-        top:260px;
-        left:10%;
+        top:180px;
+        left:25px;
         width:150px;
         padding:10px;
     }
@@ -222,8 +223,8 @@ If you re-use this theme you might want to change certain things like the title
     .pagin {
        padding-left:20px;
         position:fixed;
-        left:10%;
-        top:370px;
+        left:25px;
+        top:290px;
         width:108px;
     }
    
@@ -329,21 +330,17 @@ If you re-use this theme you might want to change certain things like the title
 The little symbol indicating that I (lesbian-beauvoir) made the theme
 */  
    .copyright {
-       bottom:-5px;
+       bottom:8px;
        left:-5px;
        position:fixed;
-       background-color:{color:Background};
+       background-color:{color:Sidebar};
        padding:5px 10px;
        margin:0 0;
        height:14px;
        font-size:11px;
-       -webkit-transition:bottom 1s; /* Safari */
-       transition:bottom 1s;
    }
    
-   .copyright:hover {
-       bottom:8px;
-   }
+
    
 
            
@@ -351,7 +348,7 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
                 
                 width:150px;
                 position:fixed;
-                top:130px;
+                top:50px;
         }
         
         .srcpic {
@@ -485,16 +482,26 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
             .like_and_reblog_buttons li {
                 float: right;
                 margin: 0;
-                padding: 4px 0 0 4px;
+                padding: 3px 0 0 1px;
                 height: 10px;
             }
 
             .like_and_reblog_buttons li:first-child {
                 border-right: 0px solid #e8e8e8;
             }
+            
+            .sidebar {
+                top:0px;
+                left:0px;
+                position:fixed;
+                height:100%;
+                background-color:{color:Sidebar};
+                width:200px;
+            }
 </style>
 </head>
 <body>
+<div class="sidebar">
 
     <div class="outerbox">
         <div class="profilepic"> 
@@ -533,7 +540,7 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
                 </div>
         
     </div>
-   </div>
+   </div></div>
 {block:Posts}
 
 {block:ContentSource}<!-- {SourceURL}
@@ -560,12 +567,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
    
         </ul>
     <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -588,12 +595,11 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
               <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>     
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -612,12 +618,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
                 <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
             </div>
 {/block:Photoset}
@@ -637,12 +643,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
                <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>    
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -662,12 +668,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
                 <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>   
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -695,12 +701,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
               <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul> 
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -733,12 +739,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
               <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>   
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
 {/block:Audio}
@@ -758,12 +764,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
               <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>     
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -788,12 +794,12 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <ul class="divider">
         </ul>
            <ul class="like-reblog" style="left:-50px">
-            <li>{block:Date} <a href="{PermaLink}" style="font-size:12px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
-<li>{block:RebloggedFrom}<p style="display:inline;font-size:12px;">Via: <a href="{ReblogParentURL}" style="font-size:12px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
+            <li>{block:Date} <a href="{PermaLink}" style="font-size:14px;"> {DayOfMonthWithZero}{DayOfMonthSuffix} of {ShortMonth}. {Year}</a>{/block:Date}</li>
+<li>{block:RebloggedFrom}<p style="display:inline;font-size:14px;">Via: <a href="{ReblogParentURL}" style="font-size:14px;">{ReblogParentName}</a></p>{/block:RebloggedFrom}{/block:NoRebloggedFrom}{/block:NoRebloggedFrom}</li>
         </ul>  
         <div class="like-icon"> <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
+              
+              <li>{LikeButton size="14px"}</li>
           </ul></div>
     </div>
  
@@ -806,7 +812,7 @@ The little symbol indicating that I (lesbian-beauvoir) made the theme
         <a name=“notes”>{PostNotes}</a>
     </div>
 {/block:PostNotes}
- 
-<div class="copyright">&copy;</br>Lesbian-Beauvoir</div>
+ <!--
+<div class="copyright">&copy;</br>Lesbian-Beauvoir</div>-->
 </body>
 </html>
